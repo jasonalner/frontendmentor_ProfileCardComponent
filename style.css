@@ -1,32 +1,40 @@
 @import url(https://fonts.googleapis.com/css?family=Kumbh+Sans:300,regular,700);
 
-html {
-    font-size:100%;
-    font-family: 'Kumbh Sans', sans-serif;
-    box-sizing: border-box;
-
-}
-
 body {
     font-family: 'Kumbh Sans';
+    margin:0;
+    padding: 0;
+    height:100vh;
     font-size: 18px;
     background-color:hsl(185, 75%, 39%);
+    background: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top -70vh left -20vw, bottom -80vh right -20vw;
+    background-color:hsl(185, 75%, 39%);
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:scroll;
 
 }
 
 #card {
+    position:fixed;
+    top:50%;
+    left:50%;
     width:328px;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    margin:auto;
+    margin-left: -164px;
+    margin-top: -187px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 40px rgba(102, 100, 100, 0.479);
 }
 
 #card-top {
     background: url("images/bg-pattern-card.svg");
     height:140px;
-
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
@@ -35,25 +43,24 @@ body {
     background-color: white;
     height:145px;
     text-align: center;
-    border-bottom:1px solid hsl(227, 10%, 46%);
+    border-bottom:1px lightgray solid;
+  
 
 }
 
 #card-middle h3 {
-    margin-top:0px;
+    margin-top:-40px;
     padding-top: 0px;
+    line-height: 0;
 }
 
 img {
     position: relative;
     top: -50px;
-    border: 8px solid white;
+    border: 7px solid white;
     border-radius: 100%;
     
-
 }
-
-
 
 #card-bottom {
     display:flex;
@@ -61,26 +68,36 @@ img {
     height:90px;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
-    
+    justify-content: space-around; 
 }
 
 h3 {
     font-size:18px;
     font-weight: 700;
-
+    color:hsl(229, 23%, 23%);
 }
 
 p {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
-    color: hsl(227, 10%, 46%);
+    color:hsl(227, 10%, 46%);
+    letter-spacing: 1px;
+    line-height: 0;
 }
 
 .graycolor {
     color:hsl(227, 10%, 46%);
     font-weight: 400;
 }
+.location {
+    font-size: 14px;
+    color:hsl(227, 10%, 46%);
+}
 
 .stats {
-    justify-content: space-evenly;
+    text-align: center;
+}
+
+.attribution {
+    margin: 15px;
 }
